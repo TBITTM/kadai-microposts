@@ -15,9 +15,11 @@
               <%= link_to "Delete", micropost, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
             <% end %>
           </div>
+             <%= render 'favorites/favorite_button', micropost: micropost %>
         </div>
       </li>
     <% end %>
   </ul>
+  
   <%== pagy_bootstrap_nav(@pagy) %>
 <% end %>
